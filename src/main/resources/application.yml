@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:mysql://root:WIihoMxadDD1mTe9cxZ8@containers-us-west-18.railway.app:5711/railway
+    username: root
+    password: WIihoMxadDD1mTe9cxZ8
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+logging:
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+
+server:
+  error:
+    include-message: always
+    include-binding-error: always
+    include-stacktrace: on_param
