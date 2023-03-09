@@ -31,9 +31,9 @@ public class Empresa {
     @NotBlank
     private String nomeEmpresa;
     @NotNull
-    private BigDecimal ebit;
+    private double ebit;
     @NotNull
-    private BigDecimal valorMercado;
+    private double valorMercado;
     @NotNull
-    private BigDecimal dividaLiquida;
+    private double dividaLiquida;
 }

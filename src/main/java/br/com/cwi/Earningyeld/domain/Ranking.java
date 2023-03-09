@@ -27,6 +27,6 @@ public class Ranking {
     private String ticker;
     private String nome_empresa;
     @NotNull
-    private BigDecimal earningYeld;
+    private double earningYeld;
 
 }
