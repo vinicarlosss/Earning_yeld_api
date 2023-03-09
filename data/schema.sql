@@ -8,7 +8,8 @@ CREATE TABLE usuario(
 	id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
-    senha VARCHAR(50) NOT NULL
+    senha VARCHAR(50) NOT NULL,
+    ativo BOOLEAN NOT NULL
 );
 
 ALTER TABLE usuario ADD CONSTRAINT uk_usuario_email UNIQUE(email);
