@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
@@ -29,4 +30,6 @@ public class Usuario {
     private String email;
     @NotBlank
     private String senha;
+    @NotNull
+    private boolean ativo;
 }
