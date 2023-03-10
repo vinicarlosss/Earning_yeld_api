@@ -6,6 +6,7 @@ import br.com.cwi.Earningyeld.domain.Usuario;
 import br.com.cwi.Earningyeld.mapper.IncluirUsuarioMapper;
 import br.com.cwi.Earningyeld.repository.UsuarioRepository;
 import br.com.cwi.Earningyeld.service.validator.ValidaEmailUnicoService;
+import br.com.cwi.Earningyeld.validator.ValidaIncluirUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -20,11 +21,14 @@ public class IncluirUsuarioService {
     private PasswordEncoder passwordEncoder;
     @Autowired
     private ValidaEmailUnicoService validaEmailUnicoService;
+    @Autowired
+    private ValidaIncluirUsuario validaIncluirUsuario;
 
     @Transactional
     public UsuarioResponse incluir(IncluirUsuarioRequest request) {
 
         validaEmailUnicoService.validar(request.getEmail());
+        validaIncluirUsuario.validar(request);
 
         Usuario usuario = IncluirUsuarioMapper.toEntity(request);
         usuario.setSenha(getSenhaCriptografada(request.getSenha()));
