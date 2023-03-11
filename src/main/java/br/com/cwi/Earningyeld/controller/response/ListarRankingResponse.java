@@ -1,32 +1,21 @@
-package br.com.cwi.Earningyeld.domain;
+package br.com.cwi.Earningyeld.controller.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
-import java.math.BigDecimal;
-
-import static javax.persistence.GenerationType.IDENTITY;
-
-@Entity
+@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class Ranking {
+public class ListarRankingResponse {
 
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
     private Long id;
-    @NotBlank
     private String ticker;
-    private String nomeEmpresa;
-    @NotNull
+    private String nome_empresa;
     private double earningYeld;
-
 }

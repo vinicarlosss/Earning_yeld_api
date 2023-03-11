@@ -3,7 +3,6 @@ package br.com.cwi.Earningyeld.service.search;
 import br.com.cwi.Earningyeld.domain.Empresa;
 import br.com.cwi.Earningyeld.repository.EmpresaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
