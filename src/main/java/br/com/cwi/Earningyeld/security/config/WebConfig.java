@@ -10,7 +10,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry){
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000")
+                .allowedOrigins("https://earningyeldapp-production.up.railway.app/")
                 .allowedMethods("*")
                 .allowedHeaders("*")
                 .exposedHeaders("*")
